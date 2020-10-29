@@ -32,7 +32,7 @@ const awsmobile = {
     "aws_bots_config": [
         {
             "name": "Lifebank_dev",
-            "alias": "$LATEST",
+            "alias": "facebook",
             "region": "ap-southeast-2"
         }
     ],
