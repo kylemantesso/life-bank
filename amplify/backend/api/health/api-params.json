@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/health",
+            "lambdaFunction": "healthFunction",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/health"
+        }
+    ],
+    "resourceName": "health",
+    "apiName": "health",
+    "functionArns": [
+        {
+            "lambdaFunction": "healthFunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-lifebank-dev-154259-authRole",
+        "unAuthRoleName": "amplify-lifebank-dev-154259-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "healthFunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

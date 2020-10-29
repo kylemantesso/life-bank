@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/webhook",
+            "lambdaFunction": "adobeWebhookFunction",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/webhook"
+        }
+    ],
+    "resourceName": "adobeWebhookApi",
+    "apiName": "adobeWebhookApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "adobeWebhookFunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-lifebank-dev-154259-authRole",
+        "unAuthRoleName": "amplify-lifebank-dev-154259-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "adobeWebhookFunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

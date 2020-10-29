@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Grommet} from "grommet";
+import { theme } from "./theme";
 
-function App() {
+import "./App.css";
+import { Chatbot } from "./components/screens/Chatbot/Chatbot";
+import { Dashboard } from "./components/screens/Dashboard/Dashboard";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { ToastProvider } from 'react-toast-notifications';
+import {Login} from "./components/screens/Login/Login";
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grommet full theme={theme}>
+      <ToastProvider>
+        <Router>
+          <Switch>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard />
+            </Route>
+            <Route path="/">
+              <Chatbot />
+            </Route>
+          </Switch>
+        </Router>
+      </ToastProvider>
+    </Grommet>
   );
-}
-
-export default App;
+};

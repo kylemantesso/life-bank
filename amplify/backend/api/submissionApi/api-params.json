@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/submission",
+            "lambdaFunction": "submissionFunction",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/submission"
+        }
+    ],
+    "resourceName": "submissionApi",
+    "apiName": "submissionApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "submissionFunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-lifebank-dev-154259-authRole",
+        "unAuthRoleName": "amplify-lifebank-dev-154259-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "submissionFunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

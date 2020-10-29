@@ -1,0 +1,33 @@
+{
+    "resourceName": "lifebankBot",
+    "botName": "Lifebank",
+    "intents": [
+        {
+            "lambda": {
+                "region": "ap-southeast-2",
+                "accountId": "088711593565",
+                "lambdaArn": "arn:aws:lambda:ap-southeast-2:088711593565:function:lifebankIntentHandler-dev",
+                "lambdaName": "lifebankIntentHandler-dev"
+            },
+            "slots": [
+                {
+                    "name": "Name",
+                    "type": "AMAZON.GB_FIRST_NAME",
+                    "prompt": "What's your name?",
+                    "required": true,
+                    "customType": false
+                }
+            ],
+
+            "utterances": [
+                "Donate blood",
+                "Blood donation"
+            ],
+            "intentName": "bloodDonation",
+            "newSlotTypes": []
+        }
+    ],
+    "outputVoice": "Joanna",
+    "sessionTimeout": 5,
+    "coppa": false
+}

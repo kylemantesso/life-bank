@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/adobe/redirect",
+            "lambdaFunction": "adobeRedirectFunction",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/adobe/redirect"
+        }
+    ],
+    "resourceName": "adobeRedirectApi",
+    "apiName": "adobeRedirectApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "adobeRedirectFunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-lifebank-dev-154259-authRole",
+        "unAuthRoleName": "amplify-lifebank-dev-154259-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "adobeRedirectFunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
