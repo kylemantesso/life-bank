@@ -1,5 +1,5 @@
 export const theme = {
-  name: "docusign-theme",
+  name: "lifebankTheme",
   rounding: 6,
   spacing: 24,
   defaultMode: "light",
